@@ -1,4 +1,7 @@
 html {
+  font-size: 10px;
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+  background: #ffc600;
   box-sizing: border-box;
 }
 
@@ -6,15 +9,11 @@ html {
   box-sizing: inherit;
 }
 
-html {
-  font-size: 10px;
-  background: #ffc600;
-}
-
 .photobooth {
   display: flex;
   flex-direction: row;
-  background: white;
+  position: relative;
+  background: #fff;
   max-width: 150rem;
   margin: 2rem auto;
   border-radius: 1rem;
@@ -25,6 +24,22 @@ html {
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem 2rem;
+}
+
+.controls .sub-title {
+  font-size: 1.8rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filter-group label {
+  width: 100%;
+  display: inline-block;
+  font-size: 1.4rem;
 }
 
 .capture-btn {
@@ -89,6 +104,7 @@ html {
   margin: 0;
   text-align: center;
   font-size: 2.5rem;
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
   background-color: #888888;
   color: transparent;
   text-shadow: .2rem .2rem .3rem rgba(255, 255, 255, .5);
@@ -104,6 +120,7 @@ html {
 
 .photo {
   width: 100%;
+  border-radius: 1rem;
 }
 
 .player {
@@ -112,6 +129,14 @@ html {
   top: 2rem;
   right: 2rem;
   border: .3rem solid #333;
+  border-radius: 1rem;
+}
+
+.preview {
+  background: #fff;
+  max-width: 150rem;
+  padding: 2rem;
+  margin: 2rem auto;
   border-radius: 1rem;
 }
 

@@ -14,20 +14,31 @@
   <div class="photobooth">
     <div class="controls">
       <div class="rgb">
-        <label for="rmin">Red Min:</label>
-        <input type="range" min=0 max=255 name="rmin">
-        <label for="rmax">Red Max:</label>
-        <input type="range" min=0 max=255 name="rmax">
-        <br>
-        <label for="gmin">Green Min:</label>
-        <input type="range" min=0 max=255 name="gmin">
-        <label for="gmax">Green Max:</label>
-        <input type="range" min=0 max=255 name="gmax">
-        <br>
-        <label for="bmin">Blue Min:</label>
-        <input type="range" min=0 max=255 name="bmin">
-        <label for="bmax">Blue Max:</label>
-        <input type="range" min=0 max=255 name="bmax">
+        <h3 class="sub-title">RGB Filters</h3>
+        <div class="filter-group">
+          <label for="rmin">Red min:</label>
+          <input type="range" min=0 max=255 name="rmin">
+        </div>
+        <div class="filter-group">
+          <label for="rmax">Red max:</label>
+          <input type="range" min=0 max=255 name="rmax">
+        </div>
+        <div class="filter-group">
+          <label for="gmin">Green min:</label>
+          <input type="range" min=0 max=255 name="gmin">
+        </div>
+        <div class="filter-group">
+          <label for="gmax">Green max:</label>
+          <input type="range" min=0 max=255 name="gmax">
+        </div>
+        <div class="filter-group">
+          <label for="bmin">Blue min:</label>
+          <input type="range" min=0 max=255 name="bmin">
+        </div>
+        <div class="filter-group">
+          <label for="bmax">Blue max:</label>
+          <input type="range" min=0 max=255 name="bmax">
+        </div>
       </div>
       <button class="capture-btn" onClick="takePhoto()">
         <div class="btn-content">
@@ -42,6 +53,8 @@
       <canvas class="photo"></canvas>
     </div>
     <video class="player"></video>
+  </div>
+  <div class="preview" style="display: none;">
     <div class="strip"></div>
   </div>
 

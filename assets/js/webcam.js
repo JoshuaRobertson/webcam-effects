@@ -1,8 +1,9 @@
-const video  = document.querySelector('.player')
-const canvas = document.querySelector('.photo')
-const ctx    = canvas.getContext('2d')
-const strip  = document.querySelector('.strip')
-const snap   = document.querySelector('.snap')
+const video   = document.querySelector('.player')
+const canvas  = document.querySelector('.photo')
+const ctx     = canvas.getContext('2d')
+const preview = document.querySelector('.preview')
+const strip   = document.querySelector('.strip')
+const snap    = document.querySelector('.snap')
 
 function getVideo() {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
@@ -28,7 +29,7 @@ function paintToCanvas() {
     // take the pixels out
     let pixels = ctx.getImageData(0, 0, width, height)
 
-    pixels = greenScreen(pixels)
+    pixels = redEffect(pixels)
 
     // put them back
     ctx.putImageData(pixels, 0, 0)
@@ -48,6 +49,7 @@ function takePhoto() {
   link.setAttribute('download', 'handsome')
   link.innerHTML = `<img src="${data}" alt="Very Handsome" />`
 
+  preview.style.display = 'block'
   strip.insertBefore(link, strip.firstChild)
 }
 
