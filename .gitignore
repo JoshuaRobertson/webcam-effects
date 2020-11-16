@@ -1,0 +1,7 @@
+# Generated files #
+######################
+.DS_Store
+
+# Project files #
+######################
+node_modules
